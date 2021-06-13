@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: rgb(72, 50, 98);
+  overflow: hidden;
+}
+
+/*-------------------------FRONTPAGE-------------------------*/
+
+.frontpage {
+  width: 100vw;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidefrontpageshow {
+  transition: all 0.4s ease;
+  transform: translateY(-800px);
+}
+
+.hidefrontpagemovie {
+  transition: all 0.4s ease;
+  transform: translateY(-2200px);
+}
+
+.button {
+  height: 15vh;
+  width: 22vw;
+  border: 2px solid burlywood;
+  margin: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  padding: 1rem;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  color: burlywood;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .frontpage {
+    flex-direction: column;
+  }
+  .button {
+    width: 50vw;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .button {
+    width: 80vw;
+  }
+}
+
+#btn1 {
+  position: relative;
+  cursor: nw-resize;
+  transition: all 0.4s ease;
+}
+
+#btn1 a {
+  position: relative;
+  cursor: nw-resize;
+  transition: all 0.4s ease;
+}
+
+#btn1:hover {
+  animation-name: wobblebvtn24;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  box-shadow: inset 0px -6em 0 0px burlywood;
+}
+
+#btn1:hover a {
+  color: black;
+}
+
+#btn2 {
+  position: relative;
+  cursor: nw-resize;
+  transition: all 0.4s ease;
+}
+
+#btn2 a {
+  position: relative;
+  transition: all 0.4s ease;
+  cursor: nw-resize;
+}
+
+#btn2:hover {
+  animation-name: wobblebvtn24;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  box-shadow: inset 0px -6em 0 0px burlywood;
+}
+
+#btn2:hover a {
+  color: black;
+}
+
+@keyframes wobblebvtn24 {
+  16.65% {
+    transform: translateX(8px);
+  }
+  33.3% {
+    transform: translateX(-6px);
+  }
+  49.95% {
+    transform: translateX(4px);
+  }
+  66.6% {
+    transform: translateX(-2px);
+  }
+  83.25% {
+    transform: translateX(1px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* -------------------------------SHOWS and MOVIES----------------------------*/
+
+.shows {
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  height: 1400px;
+  user-select: none;
+}
+
+.showshows {
+  transition: all 0.4s ease;
+  transform: translateY(-800px);
+}
+
+.movies {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+  height: 1400px;
+  user-select: none;
+}
+
+.showmovies {
+  transition: all 0.4s ease;
+  transform: translateY(-2200px);
+}
+
+h2 {
+  color: cadetblue;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+h4 {
+  font-size: 20px;
+  color: rgb(238, 23, 8);
+  margin-left: 14rem;
+  text-transform: uppercase;
+  margin-top: 0.6rem;
+  letter-spacing: 0.6px;
+}
+
+.genres {
+  display: flex;
+  margin-top: 40px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.genre {
+  height: 60px;
+  width: 200px;
+  border: 2px solid burlywood;
+  margin: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: ne-resize;
+}
+
+.genre a {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: burlywood;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.4s ease;
+  cursor: ne-resize;
+}
+
+.genre:hover {
+  animation-name: wobblebvtn24;
+  animation-timing-function: ease-in-out;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  box-shadow: inset 0px -6em 0 0px burlywood;
+  transition: all 0.4s ease;
+}
+
+.genre:hover a {
+  color: black;
+}
+
+@media only screen and (max-width: 1000px) {
+  .genre {
+    height: 40px;
+    width: 150px;
+  }
+  .genre a {
+    font-size: 0.6rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  h4 {
+    font-size: 10px;
+  }
+
+  .shows,
+  .movies {
+    margin-top: 20px;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .genre {
+    height: 30px;
+    width: 110px;
+    /* margin: 0.4rem 2rem; */
+  }
+  .genre a {
+    font-size: 0.6rem;
+  }
+  .genres {
+    margin-top: 10px;
+  }
+}
+
+/*---------SHOW RESULT-------------------*/
+
+.showresult {
+  margin-top: 15px;
+}
+
+.showresultimage {
+  width: 120px;
+  height: 160px;
+  border-radius: 5px;
+  border: 1px solid aquamarine;
+}
+
+.showdetails {
+  margin-top: 10px;
+}
+
+.showshowname,
+.warning {
+  font-size: 18px;
+  color: aliceblue;
+}
+
+.warning {
+  margin-top: 10px;
+  color: yellowgreen;
+}
+
+.showdetails a {
+  font-size: 18px;
+  text-transform: none;
+  margin-top: 20px;
+  cursor: ne-resize;
+  text-decoration: underline;
+}
+
+/*---------MOVIE RESULT-------------------*/
+
+.movieresult {
+  margin-top: 20px;
+}
+
+.movieresultimage {
+  width: 120px;
+  height: 160px;
+  border-radius: 5px;
+  border: 1px solid aquamarine;
+}
+
+.moviedetails {
+  margin-top: 10px;
+}
+
+.showmoviename,
+.warning {
+  font-size: 18px;
+  color: aliceblue;
+}
+
+.warning {
+  margin-top: 10px;
+  color: yellowgreen;
+}
+
+.moviedetails a {
+  font-size: 18px;
+  text-transform: none;
+  margin-top: 20px;
+  cursor: ne-resize;
+  text-decoration: underline;
+}
